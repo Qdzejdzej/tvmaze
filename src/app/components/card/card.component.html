@@ -1,0 +1,9 @@
+<mat-card class="card">
+    <mat-card-header>
+        <mat-card-title>{{ _item.name }}</mat-card-title>
+        <mat-card-subtitle> {{ 'card.season' | translate}}: <strong>{{ _item.season }}</strong> </mat-card-subtitle>
+        <mat-card-subtitle> {{ 'card.start' | translate}}: <strong>{{ time }}</strong> </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image (click)="emitClick(_item._embedded.show.id)" [src]="imgSrc">
+    <mat-card-content [innerHTML]="summary" class="dot"></mat-card-content>
+</mat-card>

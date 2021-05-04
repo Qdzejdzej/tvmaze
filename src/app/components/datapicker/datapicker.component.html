@@ -1,0 +1,8 @@
+<form [formGroup]="datepicker">
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'dashboard.date' | translate }}</mat-label>
+        <input matInput [matDatepicker]="dp3" name="date" formControlName="date" disabled (dateChange)="selectNewDate()">
+        <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker (selectedValueChange)="selectNewDate($event)" #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+</form>

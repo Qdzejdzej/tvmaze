@@ -1,0 +1,3 @@
+<button *ngFor="let chip of chips; let i = index" class="chip" [ngClass]="{'selected': chip === selected}" (click)=toggleChip(i)>
+    {{ chip }}
+</button>

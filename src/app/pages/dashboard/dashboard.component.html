@@ -1,0 +1,13 @@
+<div class="container">
+    <app-datapicker></app-datapicker>
+</div>
+
+<div class="container -flex-start" *ngIf="chips">
+    <app-chips [chips]="chips"></app-chips>
+</div>
+
+<div class="container">
+    <div *ngFor="let item of items; trackBy: trackById">
+        <app-card [item]="item" (clickEvent)="navigate($event)"></app-card>
+    </div>
+</div>

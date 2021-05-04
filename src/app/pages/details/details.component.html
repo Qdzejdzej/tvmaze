@@ -1,0 +1,18 @@
+<div class="container">
+    <div *ngIf="movie$ | async as movie" class="details">
+        <div>
+            <h1 class="title"> {{ movie.name }} </h1>
+            <h3> {{movie.language}} </h3>
+            <div> <b>{{ 'details.premiered' | translate }}</b> {{movie.premiered}} </div>
+            <ng-container *ngIf="movie.genres.length">
+                <b>{{ 'details.genres' | translate }}</b>
+                <span *ngFor="let genre of movie.genres"> {{ genre }} </span>
+            </ng-container>
+            <div [innerHTML]="movie.summary"></div>
+        </div>
+        <img *ngIf="movie.image else missingImg" [src]="movie.image?.original">
+        <ng-template #missingImg>
+            <h3>{{'details.missingImg' |translate}}</h3>
+        </ng-template>
+    </div>
+</div>

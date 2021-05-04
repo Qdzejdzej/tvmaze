@@ -1,0 +1,16 @@
+{
+    "dashboard": {
+        "date": "Data"
+    },
+    "card": {
+        "start": "Godzina transmisji",
+        "season": "Sezon",
+        "missingSummary": "Brakuje opisu",
+        "missingTime": "Brakuje"
+    },
+    "details": {
+        "missingImg": "Brakuje zdjęcia",
+        "premiered": "Premiera:",
+        "genres": "Gatunek:"
+    }
+}
